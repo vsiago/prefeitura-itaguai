@@ -1,0 +1,138 @@
+*, ul{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: inherit;
+    outline: none;
+    list-style: none;
+    box-sizing: border-box;
+    box-shadow: none;
+    text-decoration: none;
+}
+
+article#content {
+    padding-top: 180px;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+a:hover {
+    background: none;
+}
+
+/* fim reset */
+
+a {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.icon-acessibilidade {
+    color: #fff;
+}
+
+.logo-prefeitura {
+    width: 250px;
+}
+
+/* fim estilos padrões */
+
+/* Part Header Top */
+
+.template-part-header-top {
+    height: 63px;
+    background: #132d46;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+}
+
+.template-part-header-top .nav-menu-principal {
+    max-width: 1300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.template-part-header-top .nav-menu-principal ul {
+    display: flex;
+    gap: 6px;
+
+}
+
+.template-part-header-top .nav-menu-principal ul li a{
+    padding: .4rem .8rem;
+    color: #fff;
+}
+.template-part-header-top .nav-menu-principal .acessibilidade {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+/* Part Header Bottom */
+
+.template-part-header-bottom {
+    height: 160px;
+    background-color: #123456;
+    max-width: 100%;
+    position: absolute;
+    left: 0;
+    top: 60px;
+    width: 100vw;
+}
+
+.template-part-header-bottom .bottom-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.template-part-header-bottom .bottom-container .input-container {
+    width: 40%;
+    position: relative;
+}
+
+.template-part-header-bottom .bottom-container .input-container::after {
+    content: '';
+    background-image: url(./img/icons/lupa.svg);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+}
+
+.template-part-header-bottom .bottom-container .input-container > input {
+    padding: 15px;
+    min-height: 60px;
+    border-radius: 50px;
+    border: none;
+    font-size: 1.2rem;
+    color: #7a7c89;
+    width: 100%;
+    padding-left: 3.6rem;
+}
+
+.template-part-header-bottom .bottom-container .icons-social-media {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.template-part-header-bottom .bottom-container .icons-social-media a img {
+    width: 30px;
+}
