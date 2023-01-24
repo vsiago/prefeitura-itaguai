@@ -10,6 +10,12 @@
     text-decoration: none;
 }
 
+button {
+    background: none;
+    outline: none;
+    border: none;
+}
+
 article#content {
     padding-top: 180px;
 }
@@ -32,10 +38,27 @@ a {
 
 .icon-acessibilidade {
     color: #fff;
+    height: 100px;
 }
 
 .logo-prefeitura {
     width: 250px;
+}
+
+#input-oq-vc-procura {
+    padding: 15px;
+    min-height: 60px;
+    border-radius: 50px;
+    border: none;
+    font-size: 1.2rem;
+    color: #7a7c89;
+    width: 100%;
+    padding-left: 3.6rem;
+}
+
+.menu-mobile-title {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 /* fim estilos padrões */
@@ -88,6 +111,7 @@ a {
     left: 0;
     top: 60px;
     width: 100vw;
+    padding: 30px !important;
 }
 
 .template-part-header-bottom .bottom-container {
@@ -115,17 +139,6 @@ a {
     height: 20px;
 }
 
-.template-part-header-bottom .bottom-container .input-container > input {
-    padding: 15px;
-    min-height: 60px;
-    border-radius: 50px;
-    border: none;
-    font-size: 1.2rem;
-    color: #7a7c89;
-    width: 100%;
-    padding-left: 3.6rem;
-}
-
 .template-part-header-bottom .bottom-container .icons-social-media {
     color: #fff;
     display: flex;
@@ -135,4 +148,180 @@ a {
 
 .template-part-header-bottom .bottom-container .icons-social-media a img {
     width: 30px;
+}
+
+.header-menu-mobile {
+    display: none;
+}
+
+/* Menu responsivo */
+
+#btn-mobile {
+    display: none;
+}
+
+.icons-social-media-mobile {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    .main-header {
+        overflow-x: hidden;
+    }
+    .mobile-controls {
+        display: flex;
+        gap: 10px;
+    }
+    #btn-mobile {
+        display: block;
+    }
+    .search {
+        width: 26px;
+    }
+
+    .template-part-header-top {
+        display: none;
+    }
+    .icons-social-media {
+        display: none !important;
+    }
+    .input-container {
+        display: none;
+    }
+
+    .icons-social-media-mobile {
+        display: flex;
+        gap: 30px;
+        width: calc(100% - 60px);
+        justify-content: center;
+        border-top: solid 1px red;
+        padding: 20px;
+    }
+
+    .icons-social-media-mobile a img{
+        width: 35px;
+    }
+
+
+    .template-part-header-bottom {
+        position: absolute;
+        top: 0;
+        padding: 20px;
+        height: 96px;
+    }
+
+
+    .logo-prefeitura {
+        width: 170px;
+    }
+
+    .header-menu-mobile {
+        width: 100%;
+        height: 96px;
+        background-color: #123456;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px;
+    }
+
+    .main-header {
+        position: relative;
+        height: 100vh;
+        transition: .3s;
+    }
+
+    .main-header:has(.active) {
+        background: rgba(18, 18, 22, 0.546);
+    }
+    
+    .template-part-header-top {
+        display: block;
+        position: absolute;
+        z-index: 20;
+        height: calc(100%);
+        width: 80%;
+        right: -800px;
+        margin: 0 0 0 auto;
+        transition: all .3s;
+        visibility: hidden;
+    }
+    
+    
+    .template-part-header-top.active {
+        display: block;
+        position: absolute;
+        z-index: 20;
+        height: calc(100%);
+        width: 80%;
+        right: 0px;
+        margin: 0 0 0 auto;
+        visibility: visible;
+        
+    }
+
+
+    .template-part-header-top .nav-menu-principal{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .template-part-header-top.active .nav-menu-principal{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .template-part-header-top .nav-menu-principal ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 5px;
+        flex-grow: 1;
+        padding: 20px 0;
+    }
+    .template-part-header-top.active .nav-menu-principal ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 5px;
+        flex-grow: 1;
+        padding: 20px 0;
+    }
+
+    .template-part-header-top .nav-menu-principal ul li a {
+        display: flex;
+        padding: 1% 30px;
+        height: 45px;
+        align-items: center;
+        border-bottom: 2px solid rgba(0, 0, 0, .06);
+    }
+
+    .template-part-header-top.active .nav-menu-principal ul li a {
+        display: flex;
+        padding: 1% 30px;
+        height: 45px;
+        align-items: center;
+        border-left: solid 4px #132d46;
+        border-bottom: 2px solid rgba(0, 0, 0, .06);
+    }
+
+    .template-part-header-top.active .nav-menu-principal ul li a:active {
+        border-left: solid 4px #1BB5D9;
+        color: #1BB5D9;
+    }
+
+    .acessibilidade {
+        width: calc(100% - 60px);
+        padding: 0 0 30px 0;
+    }
+    .btn-acessibilidade {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        text-transform: uppercase;
+        font-weight: bold;
+        background-color: #123456;
+        width: 100%;
+        height: 60px;
+        border-radius: 6px;
+    }
 }
