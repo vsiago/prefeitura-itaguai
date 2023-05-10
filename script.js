@@ -39,3 +39,18 @@ newHeader.innerHTML = `
 `;
 header.appendChild(newHeader);
 
+<script>
+const btn = document.querySelector('[aria-label="Próximo"]')
+const btn1 = document.querySelector('[step-num="1"]')
+let count = 0
+
+setInterval(() => {
+    count += 1;
+    btn.click();
+if(count === 6 || count === 12 || count === 18 || count === 24 || count === 30) {
+    btn1.click();
+}
+}, 5000);
+
+</script>
+
